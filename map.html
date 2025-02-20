@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Информация о карте</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #333;
+                color: white;
+                padding: 15px;
+                font-size: 24px;
+            }
+            nav {
+                background-color: #808080;
+                padding: 10px;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                padding: 15px;
+                margin: 5px;
+                display: inline-block;
+            }
+            nav a:hover {
+                background-color: #003d82;
+            }
+            .content {
+                padding: 20px;
+            }
+            footer {
+                margin-top: 30px;
+                padding: 10px;
+                background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+
+    <header>Информация о карте</header>
+
+    <nav>
+        <a href="Adolf Bank.html">Главная</a>
+        <a href="kurs.html">Курс</a>
+        <a href="map.html">Карта</a>
+    </nav>
+
+    <div class="container">
+        <h1>Информация о карте</h1>
+        <p>Введите CVV код вашей карты, чтобы узнать о ней</p>
+        <input type="number" id="cvvInput" placeholder="Введите CVV">
+        <button onclick="checkCVV()">Проверить</button>
+
+        <div id="cardInfo" class="hidden">
+            <p></p>  <!-- Здесь появится информация о карте -->
+        </div>
+    </div>
+
+    <script>
+        function checkCVV() {
+            var cvvInput = document.getElementById("cvvInput");
+            var cardInfo = document.getElementById("cardInfo");
+
+            if (cvvInput.value === "149") {
+                
+                cardInfo.innerHTML = "<p>Владелец карты: Матвей Walker</p><p>Сумма на карте: 2 Adolf Coin</p><p>Дата создания: 19.02.25</p><p>Номер карты: 1488 6952 5369 9652</p>";
+                cardInfo.classList.remove("hidden"); // Показываем информацию
+            } else if (cvvInput.value === "338") {
+                
+                cardInfo.innerHTML = "<p>Владелец: Даниил Лукашевич</p><p>Сумма на карте: 2 Adolf Coin</p><p>Дата создания: 18.02.25</p><p>Номер карты: 1488 6988 5214 8869</p>";
+                cardInfo.classList.remove("hidden");
+            } else {
+                alert("Неверный CVV код!");
+            }
+    }
+</script>
+
+</body>
+</html>
+    
