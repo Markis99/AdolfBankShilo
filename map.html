@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="ru">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Информация о карте</title>
+    <style>        body {
+        font-family: Arial, sans-serif;            text-align: center;
+        margin: 0;            padding: 0;
+    }        header {
+                 background-color: #333;            color: white;
+                 padding: 15px;            font-size: 24px;
+             }        nav {
+                          background-color: #808080;            padding: 10px;
+                      }        nav a {
+                                   color: white;            text-decoration: none;
+                                   padding: 15px;            margin: 5px;
+                                   display: inline-block;        }
+    nav a:hover {            background-color: #003d82;
+    }        .content {
+                 padding: 20px;        }
+    footer {            margin-top: 30px;
+        padding: 10px;            background-color: #f1f1f1;
+    }        /* Стили для скрытия элементов */
+    .hidden {            display: none;
+    }        .container {
+                 margin: 20px auto;            max-width: 500px;
+             }        input, button {
+                          padding: 10px;            margin: 10px;
+                          font-size: 16px;        }
+    </style>
+</head><body>
+<header>Информация о карте</header>
+<nav>    <a href="index.html">Главная</a>
+    <a href="kurs.html">Курс</a>    <a href="map.html">Карта</a>
+</nav>
+<div class="container">    <h1>Информация о карте</h1>
+    <p>Введите CVV код вашей карты, чтобы узнать о ней</p>    <input type="number" id="cvvInput" placeholder="Введите CVV">
+    <button onclick="checkCVV()">Проверить</button>    <div id="cardInfo" class="hidden">
+
+        <p></p>  <!-- Здесь появится информация о карте -->    </div>
+</div>
+<script>    function checkCVV() {
+    var cvvInput = document.getElementById("cvvInput");        var cardInfo = document.getElementById("cardInfo");
+    if (cvvInput.value === "14663636329") {
+        cardInfo.innerHTML = "<p>Владелец карты: Матвей Walker</p><p>Сумма на карте: 2 Adolf Coin</p><p>Дата создания: 19.02.25</p><p>Номер карты: 1488 6952 5369 9652</p>";
+        cardInfo.classList.remove("hidden"); // Показываем информацию        }
+    }    else if (cvvInput.value === "338") {
+        cardInfo.innerHTML = "<p>Владелец: Даниил Лукашевич</p><p>Сумма на карте: 2 Adolf Coin</p><p>Дата создания: 18.02.25</p><p>Номер карты: 1488 6988 5214 8869</p>";            cardInfo.classList.remove("hidden");
+    }        else if (cvvInput.value === "752") {
+        cardInfo.innerHTML = "<p>Владелец: Тимур Ковалик</p><p>Сумма на карте: 36 Adolf Coin</p><p>Вид: Бронзовая версия</p><p>Дата создания: 20.02.25</p><p>Номер карты: 1488 6952 5962 8814</p>";            cardInfo.classList.remove("hidden");
+    }        else if (cvvInput.value === "860") {
+        cardInfo.innerHTML = "<p>Владелец: Маркиз Агушевич</p><p>Сумма на карте: 14 Adolf Coin</p><p>Вид: Золотая версия</p><p>Дата создания: 20.02.25</p><p>Номер карты: 9991 6952 5962 1488</p>";            cardInfo.classList.remove("hidden");
+    }        else if (cvvInput.value === "234767") {
+        cardInfo.innerHTML = "<p>Владелец: Маркиз Агушевич</p><p>Сумма на карте: 2580 Adolf Coin</p><p>Вид: Gold Limited Version</p><p>Дата создания: 20.02.25</p><p>Номер карты: 234767</p>";            cardInfo.classList.remove("hidden");
+    }        else if (cvvInput.value === "788") {
+        cardInfo.innerHTML = "<p>Владелец: Даниил Риддик</p><p>Сумма на карте: 1 Adolf Coin</p><p>Дата создания: 20.02.25</p><p>Номер карты: 1488 5396 8799 5269</p>";            cardInfo.classList.remove("hidden");
+    }        else if (cvvInput.value === "150") {
+        cardInfo.innerHTML = "<p>Владелец: Нету</p><p>Сумма на карте: 0 Adolf Coin</p><p>Вид: Silver Limited Version</p><p>Дата создания: 20.02.25</p><p>Номер карты: 150693</p>";            cardInfo.classList.remove("hidden");
+    }   else if (cvvInput.value === "149") {
+                cardInfo.innerHTML = "<p>Владелец: Матвей Walker</p><p>Сумма на карте: 19 Adolf Coin</p><p>Вид: Серебряная версия</p><p>Дата создания: 19.02.25</p><p>Номер карты: 1488 6952 5369 9652</p>";            cardInfo.classList.remove("hidden");
+    }
+    else if (cvvInput.value === "456") {
+        cardInfo.innerHTML = "<p>Владелец: Максутка</p><p>Сумма на карте: 115 Adolf Coin</p><p>Вид: Платиновая версия</p><p>Дата создания: 21.02.25</p><p>Номер карты: 1488 6952 5369 5652</p>";            cardInfo.classList.remove("hidden");
+    }
+    else if (cvvInput.value === "285") {
+        cardInfo.innerHTML = "<p>Владелец: Сифон Бобрович</p><p>Сумма на карте: 43 Adolf Coin</p><p>Вид: Бронзовая версия(скоро)</p><p>Дата создания: 26.02.25</p><p>Номер карты: 1488 7845 5269 4257</p>";            cardInfo.classList.remove("hidden");
+    }
+    else if (cvvInput.value === "821") {
+        cardInfo.innerHTML = "<p>Владелец: Kihuntt</p><p>Сумма на карте: 19 Adolf Coin</p><p>Вид: Нету</p><p>Дата создания: 01.03.25</p><p>Номер карты: Нету</p>";            cardInfo.classList.remove("hidden");
+    }
+    else if (cvvInput.value === "583") {
+        cardInfo.innerHTML = "<p>Владелец: Micost</p><p>Сумма на карте: 2 Adolf Coin</p><p>Вид: Нету</p><p>Дата создания: 01.03.25</p><p>Номер карты: Нету</p>";            cardInfo.classList.remove("hidden");
+    }
+        }
+</script>
+<!-- Блок для проверки первых двух полей --><div class="container">
+    <h2>Снять деньги с карты</h2>    <input type="text" id="firstInput"
+                                            placeholder="Введите CVV код">
+    <input type="text" id="secondInput" placeholder="Пароль от карты">
+    <button onclick="checkGreeting()">Проверить</button>
+    <div id="greetingMessage" class="hidden">
+        <p></p>
+    </div>
+</div>
+<!-- Предполагаемый текст "Снять деньги с карты" -->
+<div id="withdrawText">
+    <p>Снять деньги с карты</p>
+</div>
+<script>
+    function checkGreeting() {
+        var firstInput = document.getElementById("firstInput").value.trim();
+        var secondInput = document.getElementById("secondInput").value.trim();
+        var greetingMessage = document.getElementById("greetingMessage");
+        // Если условия выполнены, показываем блок с третьим полем и кнопкой
+        if (firstInput === "149" && secondInput === "2316") {
+            greetingMessage.innerHTML = "<p>Отлично. Введите сумму которую хотите снять.</p>";
+            greetingMessage.classList.remove("hidden");
+            document.getElementById("thirdContainer").classList.remove("hidden");
+            // Скрываем 1 и 2 поля ввода и кнопку проверки
+            document.getElementById("firstInput").style.display = "none";
+            document.getElementById("secondInput").style.display = "none";
+            document.querySelector('button[onclick="checkGreeting()"]').style.display = "none";
+            // Скрываем текст "Снять деньги с карты"
+            document.getElementById("withdrawText").style.display = "none";
+        }
+        else if (firstInput === "999" && secondInput === "Rx99") {
+            greetingMessage.innerHTML = "<p>Отлично. Введите сумму которую хотите снять.</p>";
+            greetingMessage.classList.remove("hidden");
+            document.getElementById("thirdContainer").classList.remove("hidden");
+            document.getElementById("firstInput").style.display = "none";
+            document.getElementById("secondInput").style.display = "none";
+            document.querySelector('button[onclick="checkGreeting()"]').style.display = "none";
+            // Скрываем текст "Снять деньги с карты"
+            document.getElementById("withdrawText").style.display = "none";
+        } else {
+            greetingMessage.innerHTML = "<p>Похоже, вы ввели неправильно</p>";
+            greetingMessage.classList.remove("hidden");
+            document.getElementById("thirdContainer").classList.add("hidden");
+        }
+
+    }
+</script>
+<!-- Блок для третьего поля ввода и новой кнопки -->
+<div class="container hidden" id="thirdContainer">
+    <h2>Сумма, которую вы хотите снять</h2>
+    <input type="text" id="thirdInput" placeholder="Введите сумму">
+    <button onclick="checkThird()">Получить чек</button>
+    <div id="thirdMessage" class="hidden">
+        <p></p>
+    </div>
+</div>
+<script>
+    function checkThird() {
+        var thirdInput = document.getElementById("thirdInput").value.trim();
+        var thirdMessage = document.getElementById("thirdMessage");
+        // Если значение третьего поля содержит хотя бы одну цифру
+        if (/\d/.test(thirdInput)) {
+            thirdMessage.innerHTML = "<h2>Операция завершена!</h2><p>Ваша операция прошла успешно!:</p><p>Теперь заявите о ней Владельцу Банка:</p><p>AdolfBank.shiloCRP:</p> <p>Дата: 21.02.25</p><img src=\"подпись.png\" \"width=\"390\">";
+            thirdMessage.innerHTML = "<h2>Чек на снятие денег</h2><p>AdolfBank.shiloCRP:</p> <p>Дата: 21.02.25</p>";
+            // Скрываем 3-е поле ввода и кнопку проверки
+            document.getElementById("thirdInput").style.display = "none";
+            document.querySelector('button[onclick="checkThird()"]').style.display = "none";
+            // Скрываем текст "Отлично. Выберите сумму которую хотите снять" (в greetingMessage)
+            document.getElementById("greetingMessage").style.display = "none";
+            // Скрываем заголовок "Сумма, которую вы хотите снять"
+            document.getElementById("thirdContainer").querySelector("h2").style.display = "none";
+        } else {
+            thirdMessage.innerHTML = "<p>Вы не ввели сумму!</p>";
+        }
+        thirdMessage.classList.remove("hidden");
+    }
+
+    }
+</script>
+
+<!-- Поле для ввода промокода -->
+<div class="container">    <h1>Промокод</h1>
+    <p>Введите промокод, чтобы получить награду</p>    <input type="text" id="PromoInput" placeholder="Введите Промокод">
+    <button onclick="checkPromo()">Проверить</button>    <div id="PromoInfo" class="hidden">
+
+        <p>Semgas</p>  ыф<!-- Здесьы появится информация о карте -->    </div>
+</div>
+<script>
+    function checkPromo() {
+    var PromoInput = document.getElementById("PromoInput");
+    var PromoInfo = document.getElementById("PromoInfo");
+    if (PromoInput.value === "Markis99") {
+        PromoInfo.innerHTML = "<h4>Промокод просрочен!</h4><p>Награда: 2 Adolf Coin</p>";
+        PromoInfo.classList.remove("hidden");  }
+    else if (PromoInput.value === "markis99") {
+        PromoInfo.innerHTML = "<h4>Промокод просрочен!</h4><p>Награда: 2 Adolf Coin</p>";
+        PromoInfo.classList.remove("hidden");  }
+    else if (PromoInput.value === "Chilo99") {
+            PromoInfo.innerHTML = "<h4>Отлично! Промокод верный!</h4><p>Награда: 3 Adolf Coin</p>";
+            PromoInfo.classList.remove("hidden");  }
+    else if (PromoInput.value === "chilo99") {
+        PromoInfo.innerHTML = "<h4>Промокод верный!</h4><p>Награда: 3 Adolf Coin</p>";
+        PromoInfo.classList.remove("hidden");  }
+    else if (PromoInput.value === "SifonRichman1") {
+        PromoInfo.innerHTML = "<h4>Промокод еще не доступен!</h4><p>Награда: 10 Adolf Coin</p>";
+        PromoInfo.classList.remove("hidden");  }
+    else if (PromoInput.value === "MotaF") {
+        PromoInfo.innerHTML = "<h4>Промокод еще не доступен!</h4><p>Награда: 3 Adolf Coin</p>";
+        PromoInfo.classList.remove("hidden");  }
+    else  {
+        PromoInfo.innerHTML = "<h4>Такого промокода не существует!</h4>";
+        PromoInfo.classList.remove("hidden");  }
+    }
+
+</script>
+
+</script>
+</body></html>
